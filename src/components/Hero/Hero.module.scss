@@ -1,0 +1,106 @@
+.heroContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(#0b0b0b 0%, #0b0b0b 70%, #160e24 100%);
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    overflow-x: hidden;
+    position: relative;
+
+    & h2 {
+        z-index: 10;
+        text-align: center;
+        font-size: 80px;
+        font-weight: 500;
+        line-height: 1;
+
+        & .slogan {
+            background: linear-gradient(#fff, #c7c7c7);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+
+            &Highlight {
+                background: linear-gradient(90deg, #e4b7ff, #74d5ff);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+
+    & .heroContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        z-index: 10;
+
+        & p {
+            color: #eaeaea;
+            text-align: center;
+        }
+
+        & a {
+            display: flex;
+            background: linear-gradient(90deg, #6c7b9e3f, #6e5b893b);
+            width: fit-content;
+            padding: 16px 24px;
+            align-items: center;
+            border-radius: 100px;
+            gap: 16px;
+            box-shadow: inset 3px 1px 12px rgba(255, 255, 255, 0.65);
+            position: relative;
+            transition: box-shadow .2s ease-in-out;
+            
+            &:hover {
+                box-shadow: inset 3px 1px 8px rgba(255, 255, 255, 0.65);
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                padding: 2px;
+                border-radius: 100px;
+                background: linear-gradient(
+                    to right,
+                    rgba(141, 173, 255, 0.5) 0%,
+                    rgba(141, 173, 255, 0.07) 25%,
+                    rgba(141, 173, 255, 0) 50%,
+                    rgba(192, 141, 255, 0.07) 75%,
+                    rgba(192, 141, 255, 0.5) 100%
+                );
+
+                -webkit-mask: linear-gradient(#fff 0 0) content-box,
+                    linear-gradient(#fff 0 0);
+                -webkit-mask-composite: destination-out;
+                mask-composite: exclude;
+
+                pointer-events: none;
+                z-index: -1;
+            }
+
+            & h4 {
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            & img {
+                height: 18px;
+            }
+        }
+    }
+
+    & .heroShape {
+        position: absolute;
+        height: 80vh;
+        right: 0;
+        transform: translateX(50%);
+    }
+}

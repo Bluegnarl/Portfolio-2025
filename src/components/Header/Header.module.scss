@@ -1,0 +1,80 @@
+.header {
+    display: flex;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 24px 24px;
+    z-index: 20;
+
+    & .aboutButton {
+        display: flex;
+        padding: 8px 20px 8px 10px;
+        gap: 10px;
+        align-items: center;
+        background: #ffffff15;
+        height: fit-content;
+        border-radius: 100px;
+        box-shadow: inset 2px 0px 12px rgba(255, 255, 255, 0.75);
+        z-index: 0;
+        position: relative;
+        cursor: pointer;
+        user-select: none;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            padding: 2px 2px 2px 2px;
+            border-radius: 100px;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0.75) 0%,
+                rgba(255, 255, 255, 0.15) 25%,
+                rgba(255, 255, 255, 0) 50%,
+                rgba(255, 255, 255, 0.15) 75%,
+                rgba(255, 255, 255, 0.75) 100%
+            );
+
+            -webkit-mask: linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        & img {
+            width: 40px;
+            height: 40px;
+        }
+
+        & h1 {
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+
+    & nav {
+        display: flex;
+        gap: 24px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        & a {
+            color: #c8c8c8;
+            font-size: 18px;
+            font-weight: 400;
+            transition: color .2s ease-in-out;
+            &.active {
+                color: #fff;
+            }
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
