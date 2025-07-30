@@ -1,0 +1,42 @@
+.floatingSkillContainer {
+    display: flex;
+    position: absolute;
+    z-index: 15;
+    gap: 8px;
+    padding: 16px 24px;
+    background: #ffffff6b;
+    box-shadow: inset 4px 1px 20px #fff;
+    border-radius: 100px;
+    backdrop-filter: blur(3px);
+    align-items: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        padding: 2px 2px 2px 2px;
+        border-radius: 100px;
+        background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.75) 0%,
+            rgba(255, 255, 255, 0) 50%,
+            rgba(255, 255, 255, 0.75) 100%
+        );
+
+        -webkit-mask: linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    & img {
+        width: 28px;
+    }
+
+    & h3 {
+        color: #1f1f1f;
+    }
+}
