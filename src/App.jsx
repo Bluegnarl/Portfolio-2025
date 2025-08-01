@@ -22,7 +22,7 @@ export default function App() {
 
     return (
         <>
-            <Header />
+            <Header windowWidth={windowWidth} />
             <Hero windowWidth={windowWidth} windowHeight={windowHeight} />
             <Skills />
             <Works />

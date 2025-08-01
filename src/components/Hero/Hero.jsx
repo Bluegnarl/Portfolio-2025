@@ -9,19 +9,10 @@ export default function Hero({ windowWidth, windowHeight }) {
     const heroElementsRef = useRef(null);
 
     useEffect(() => {
-        function update() {
-            if (heroElementsRef.current) {
-                setShapeWidth(
-                    windowWidth - heroElementsRef.current.offsetWidth
-                );
-                setShapeHeight(
-                    windowHeight - heroElementsRef.current.offsetHeight
-                );
-            }
+        if (heroElementsRef.current) {
+            setShapeWidth(windowWidth - heroElementsRef.current.offsetWidth);
+            setShapeHeight(windowHeight - heroElementsRef.current.offsetHeight);
         }
-        update();
-        window.addEventListener("resize", update);
-        return () => window.removeEventListener("resize", update);
     }, [windowWidth, windowHeight]);
 
     return (
