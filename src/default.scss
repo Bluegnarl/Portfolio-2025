@@ -1,65 +1,74 @@
-@use './assets/styles/fonts.scss';
-@use './assets/styles/variables.scss';
+@use "./assets/styles/fonts.scss";
+@use "./assets/styles/variables.scss";
 
 :root {
-  font-family: 'Manrope', sans-serif;
-  color: #fff;
+    font-family: "Manrope", sans-serif;
+    color: #fff;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overscroll-behavior-y: none; /* empêche le "bump" iOS en haut/bas */
+    overflow-x: hidden;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  min-width: 320px;
-  min-height: 100dvh;
+    margin: 0;
+    display: flex;
+    min-width: 320px;
+    min-height: 100dvh;
+    overflow-y: auto;
 }
 
 a {
-  text-decoration: none;
-  color: #fff;
+    text-decoration: none;
+    color: #fff;
 }
 
 p {
-  font-size: 20px;
-  font-weight: 400;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 h3 {
-  font-size: 24px;
-  font-weight: 400;
+    font-size: 24px;
+    font-weight: 400;
 }
 
 @media screen and (min-width: 2000px) {
-  p {
-    font-size: 24px;
-  }
+    p {
+        font-size: 24px;
+    }
 }
 
 @media screen and (max-width: 1400px) {
-  p {
-    font-size: 18px;
-  }
+    p {
+        font-size: 18px;
+    }
 }
 
 @media screen and (max-width: 700px) {
-  p {
-    font-size: 16px;
-  }
+    p {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 400px) {
-  p {
-    font-size: 15px;
-  }
+    p {
+        font-size: 15px;
+    }
 }
 
 @media screen and (max-width: 350px) {
-  p {
-    font-size: 14px;
-  }
+    p {
+        font-size: 14px;
+    }
 }
