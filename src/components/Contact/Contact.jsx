@@ -2,12 +2,12 @@ import styles from "./Contact.module.scss";
 
 import { useRef, useEffect, useState } from "react";
 
-import sendIcon from "../../assets/img/send.png"
-import githubIcon from "../../assets/img/github.png"
+import sendIcon from "../../assets/img/send.png";
+import githubIcon from "../../assets/img/github.png";
 import instagramIcon from "../../assets/img/instagram.png";
 import whatsappIcon from "../../assets/img/whatsapp.png";
 import facebookIcon from "../../assets/img/facebook.png";
-import contact_shape from "../../assets/img/contact_shape.png"
+import contact_shape from "../../assets/img/contact_shape.png";
 
 import BubbleButton from "../BubbleButton/BubbleButton";
 
@@ -23,7 +23,11 @@ export default function Contact() {
 
     return (
         <section className={styles.contactContainer}>
-            <img className={styles.shape} src={contact_shape} alt="Contact Shape" />
+            <img
+                className={styles.shape}
+                src={contact_shape}
+                alt="Contact Shape"
+            />
             <div>
                 <div className={styles.contactHeader}>
                     <h2>Ensemble, créons un projet qui vous ressemble</h2>
@@ -32,13 +36,13 @@ export default function Contact() {
                             <img src={githubIcon} alt="Github" />
                         </BubbleButton>
                         <BubbleButton>
-                            <img src={instagramIcon} alt="Github" />
+                            <img src={instagramIcon} alt="Instagram" />
                         </BubbleButton>
                         <BubbleButton>
-                            <img src={facebookIcon} alt="Github" />
+                            <img src={facebookIcon} alt="Facebook" />
                         </BubbleButton>
                         <BubbleButton>
-                            <img src={whatsappIcon} alt="Github" />
+                            <img src={whatsappIcon} alt="WhatsApp" />
                         </BubbleButton>
                     </div>
                 </div>

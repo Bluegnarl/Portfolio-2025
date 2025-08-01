@@ -6,9 +6,15 @@
     background: linear-gradient(#0b0b0b 0%, #0b0b0b 70%, #160e24 100%);
     align-items: center;
     justify-content: center;
-    gap: 48px;
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative;
+
+    & .heroElements {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        padding: 24px;
+    }
 
     & h2 {
         z-index: 10;
@@ -42,7 +48,7 @@
         z-index: 10;
 
         & p {
-            color: #eaeaea;
+            color: var(--on-dark-1);
             text-align: center;
         }
 
@@ -58,6 +64,7 @@
             box-shadow: inset 4px 0px 12px rgba(255, 255, 255, 0.75);
             position: relative;
             transition: box-shadow 0.2s ease-in-out, scale 0.2s ease-out;
+            backdrop-filter: blur(8px);
 
             &:hover {
                 box-shadow: inset 0px 0px 8px rgba(222, 217, 255, 0.65);
@@ -128,8 +135,145 @@
 
     & .heroShape {
         position: absolute;
-        height: 80vh;
+        max-height: 80vh;
         right: 0;
         transform: translateX(50%);
+        aspect-ratio: 1/1;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .heroContainer {
+        & .heroElements {
+            gap: 48px;
+        }
+
+        & h2 {
+            font-size: 100px;
+        }
+
+        & .heroContent {
+            gap: 40px;
+
+            & a {
+                padding: 18px 28px;
+                gap: 16px;
+
+                & h4 {
+                    font-size: 24px;
+                }
+
+                & img {
+                    height: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .heroContainer {
+        & .heroElements {
+            gap: 40px;
+        }
+
+        & h2 {
+            font-size: 64px;
+        }
+
+        & .heroContent {
+            gap: 24px;
+
+            & a {
+                gap: 12px;
+
+                & h4 {
+                    font-size: 18px;
+                }
+
+                & img {
+                    height: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .heroContainer {
+        & .heroShape {
+            max-width: 120vw;
+            right: auto;
+            bottom: 0%;
+            left: 50%;
+            top: auto;
+            transform: translate(-50%, 50%) rotate(90deg);
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .heroContainer {
+        & .heroElements {
+            gap: 36px;
+        }
+
+        & h2 {
+            font-size: 48px;
+        }
+
+        & .heroContent {
+            gap: 28px;
+
+            & a {
+                padding: 14px 22px;
+                gap: 8px;
+
+                &::before {
+                    padding: 2px;
+                }
+
+                & h4 {
+                    font-size: 18px;
+                }
+
+                & img {
+                    height: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .heroContainer {
+        & .heroElements {
+            gap: 32px;
+        }
+
+        & h2 {
+            font-size: 36px;
+        }
+
+        & .heroContent {
+            gap: 24px;
+
+            & a {
+                padding: 12px 20px;
+                gap: 8px;
+
+                &::before {
+                    padding: 2px;
+                }
+
+                & h4 {
+                    font-size: 16px;
+                }
+
+                & img {
+                    height: 14px;
+                }
+            }
+        }
     }
 }
