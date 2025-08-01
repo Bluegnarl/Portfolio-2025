@@ -1,7 +1,7 @@
 .heroContainer {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100dvh;
     width: 100%;
     background: linear-gradient(#0b0b0b 0%, #0b0b0b 70%, #160e24 100%);
     align-items: center;
@@ -252,19 +252,38 @@
         }
 
         & h2 {
-            font-size: 36px;
+            font-size: 40px;
         }
 
         & .heroContent {
             gap: 24px;
 
             & a {
+                padding: 14px 22px;
+                gap: 12px;
+
+                & h4 {
+                    font-size: 18px;
+                }
+
+                & img {
+                    height: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .heroContainer {
+        & h2 {
+            font-size: 36px;
+        }
+
+        & .heroContent {
+            & a {
                 padding: 12px 20px;
                 gap: 8px;
-
-                &::before {
-                    padding: 2px;
-                }
 
                 & h4 {
                     font-size: 16px;
