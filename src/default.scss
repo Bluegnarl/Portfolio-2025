@@ -15,7 +15,6 @@
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100dvh;
 }
@@ -54,6 +53,12 @@ h3 {
 }
 
 @media screen and (max-width: 400px) {
+  p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 350px) {
   p {
     font-size: 14px;
   }
