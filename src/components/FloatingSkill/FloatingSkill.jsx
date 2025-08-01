@@ -1,6 +1,6 @@
 import styles from "./FloatingSkill.module.scss";
 
-export default function FloatingSkill({ children, src, top, left }) {
+export default function FloatingSkill({ children, Image, top, left }) {
     return (
         <div
             className={styles.floatingSkillContainer}
@@ -10,7 +10,7 @@ export default function FloatingSkill({ children, src, top, left }) {
                 transform: `translate(-${top}%, -${left}%)`,
             }}
         >
-            <img src={src} alt={children} />
+            <Image fill="#000" />
             <h3>{children}</h3>
         </div>
     );

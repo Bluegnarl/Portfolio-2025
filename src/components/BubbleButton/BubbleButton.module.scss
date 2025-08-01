@@ -1,28 +1,33 @@
-.floatingSkillContainer {
+.bubbleButton {
+    color: var(--on-light-0);
+    font-size: 22px;
+    font-weight: 500;
+
     display: flex;
-    position: absolute;
-    z-index: 15;
-    gap: 8px;
-    padding: 16px 24px;
-    background: #ffffff6b;
-    box-shadow: inset 4px 1px 20px #fff;
-    border-radius: 100px;
-    backdrop-filter: blur(3px);
+    padding: 20px 24px;
+    width: 100%;
+    justify-content: center;
     align-items: center;
+    gap: 16px;
+
+    background: #ffffff4e;
+    position: relative;
+    border-radius: 100px;
+    backdrop-filter: blur(2px);
+    box-shadow: inset 3px 1px 12px #fff, 0 0 16px #0000001b;
     cursor: pointer;
-    transition: transform .2s ease-in-out;
 
     &::before {
         content: "";
         position: absolute;
         inset: 0;
-        padding: 2px 2px 2px 2px;
+        padding: 2px;
         border-radius: 100px;
         background: linear-gradient(
             to right,
-            rgba(255, 255, 255, 0.75) 0%,
+            rgba(255, 255, 255, 1) 0%,
             rgba(255, 255, 255, 0) 50%,
-            rgba(255, 255, 255, 0.75) 100%
+            rgba(255, 255, 255, 1) 100%
         );
 
         -webkit-mask: linear-gradient(#fff 0 0) content-box,
@@ -34,11 +39,7 @@
         z-index: -1;
     }
 
-    & svg {
-        width: 28px;
-    }
-
-    & h3 {
-        color: #1f1f1f;
+    & img {
+        width: 32px;
     }
 }

@@ -1,0 +1,32 @@
+[
+    {
+        "client": "Bureau Sen",
+        "title": "Site Web Professionnel",
+        "image": "bureau_sen_website",
+        "tags": ["dev", "design", "branding"]
+    },
+    {
+        "client": "MK-IT",
+        "title": "Publications Réseaux Sociaux",
+        "image": "mkit_publications",
+        "tags": ["design", "branding"]
+    },
+    {
+        "client": "Anonyme",
+        "title": "Posters Décoratifs",
+        "image": "anonymous_cars",
+        "tags": ["design"]
+    },
+    {
+        "client": "DJ",
+        "title": "Affiches Événementielles",
+        "image": "dj_posters",
+        "tags": ["design"]
+    },
+    {
+        "client": "Bureau Sen",
+        "title": "Publications Animées",
+        "image": "bureau_sen_animations",
+        "tags": ["montage", "design"]
+    }
+]

@@ -20,7 +20,7 @@ export default function Hero() {
                 </p>
                 <a href="/">
                     <h4>Créons ensemble</h4>
-                    <img src={arrow_outward} alt="" />
+                    <img src={arrow_outward} alt="arrow outward" />
                 </a>
             </div>
         </section>

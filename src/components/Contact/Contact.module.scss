@@ -1,0 +1,73 @@
+.contactContainer {
+    display: flex;
+    min-height: 100vh;
+    background: radial-gradient(circle at left, #49a9e538, #00000000),
+        linear-gradient(#fff, #ffe2ff);
+    padding: 110px 64px 64px 64px;
+    position: relative;
+
+    & .shape {
+        position: absolute;
+        left: 32%;
+        top: 55%;
+        transform: translate(-68%, -45%);
+        width: 33vw;
+    }
+
+    & > div {
+        display: flex;
+        width: 100%;
+        padding: 128px 64px 64px 64px;
+        background: #ffffff3e;
+        border: 2px solid #ffffff5e;
+        backdrop-filter: blur(6px);
+        border-radius: 36px;
+        justify-content: space-between;
+        gap: 48px;
+
+        & .contactHeader {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+            justify-content: space-between;
+            max-width: 600px;
+            & h2 {
+                font-size: 40px;
+                line-height: 1.2;
+                font-weight: 500;
+                color: var(--on-light-0);
+            }
+
+            & > div {
+                display: flex;
+                gap: 8px;
+            }
+        }
+
+        & .contactContent {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-between;
+
+            & > div {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                & h4 {
+                    font-size: 24px;
+                    font-weight: 500;
+                    color: var(--on-light-1);
+                    width: fit-content;
+                }
+
+                & p {
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: var(--on-light-2);
+                }
+            }
+        }
+    }
+}

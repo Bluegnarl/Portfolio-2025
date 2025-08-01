@@ -1,7 +1,7 @@
 import styles from "./Skills.module.scss";
 import skills_shape from "../../assets/img/skills_shape.png";
 import FloatingSkill from "../FloatingSkill/FloatingSkill";
-import cinematic_blur from "../../assets/img/cinematic_blur.svg"
+import { MontageIcon, DevIcon, DesignIcon, BrandingIcon } from "../Icons";
 
 export default function Skills() {
     return (
@@ -23,16 +23,16 @@ export default function Skills() {
                     solutions sur mesure, efficaces et créatives.
                 </p>
             </div>
-            <FloatingSkill top={40} left={65} src={cinematic_blur}>
+            <FloatingSkill top={40} left={65} Image={BrandingIcon}>
                 Identité Visuelle
             </FloatingSkill>
-            <FloatingSkill top={40} left={35} src={cinematic_blur}>
+            <FloatingSkill top={40} left={35} Image={DesignIcon}>
                 Design
             </FloatingSkill>
-            <FloatingSkill top={70} left={70} src={cinematic_blur}>
+            <FloatingSkill top={70} left={70} Image={DevIcon}>
                 Développement
             </FloatingSkill>
-            <FloatingSkill top={70} left={40} src={cinematic_blur}>
+            <FloatingSkill top={70} left={40} Image={MontageIcon}>
                 Montage Vidéo
             </FloatingSkill>
         </section>
