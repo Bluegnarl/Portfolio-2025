@@ -1,10 +1,10 @@
 import styles from "./Project.module.scss";
 
-import ProjectTag from "../ProjectTag/ProjectTag";
+import ProjectTag from "./ProjectTag/ProjectTag";
 
-import { DevIcon, BrandingIcon, DesignIcon, MontageIcon } from "../Icons";
+import { DevIcon, BrandingIcon, DesignIcon, MontageIcon } from "../../Icons";
 
-import { projectImages } from "../Images";
+import { projectImages } from "../../Images";
 
 export default function Project({ project }) {
     const tagMap = {

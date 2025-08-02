@@ -43,3 +43,29 @@
         width: 32px;
     }
 }
+
+@media screen and (max-width: 1500px) {
+    .bubbleButton {
+        font-size: 20px;
+
+        padding: 16px 24px;
+        gap: 12px;
+
+        & img {
+            width: 28px;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .bubbleButton {
+        font-size: 18px;
+
+        padding: 16px 24px;
+        gap: 12px;
+
+        & img {
+            width: 26px;
+        }
+    }
+}

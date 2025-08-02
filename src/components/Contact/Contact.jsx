@@ -9,9 +9,9 @@ import whatsappIcon from "../../assets/img/whatsapp.png";
 import facebookIcon from "../../assets/img/facebook.png";
 import contact_shape from "../../assets/img/contact_shape.png";
 
-import BubbleButton from "../BubbleButton/BubbleButton";
+import BubbleButton from "./BubbleButton/BubbleButton";
 
-export default function Contact() {
+export default function Contact({ windowWidth }) {
     const contactH4 = useRef(null);
     const [h4Width, setH4Width] = useState(null);
 
@@ -19,7 +19,7 @@ export default function Contact() {
         if (contactH4.current) {
             setH4Width(contactH4.current.offsetWidth);
         }
-    }, []);
+    }, [windowWidth]);
 
     return (
         <section className={styles.contactContainer}>
@@ -54,7 +54,9 @@ export default function Contact() {
                         </h4>
                         <p
                             style={{
-                                maxWidth: `${h4Width + 50}px`,
+                                maxWidth: `${
+                                    windowWidth > 900 ? (h4Width + 50 + "px") : "none"
+                                }`,
                             }}
                         >
                             Décrivez votre projet de manière aussi détaillée que

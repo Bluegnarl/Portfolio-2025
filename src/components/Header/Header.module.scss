@@ -73,9 +73,13 @@
             opacity: 0.8;
             font-size: 18px;
             font-weight: 400;
-            transition: color 0.2s ease-in-out;
+            transition: opacity 0.2s ease-in-out;
             &.active {
                 opacity: 1;
+                &:hover {
+                    opacity: 0.8;
+                    cursor: default;
+                }
             }
             &:hover {
                 opacity: 1;
@@ -84,7 +88,7 @@
     }
 
     & .menuButton {
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
         background: #ffffff15;
@@ -138,6 +142,10 @@
     .header {
         & nav {
             display: none;
+        }
+
+        & .menuButton {
+            display: flex;
         }
     }
 }

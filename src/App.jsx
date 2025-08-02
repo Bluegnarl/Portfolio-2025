@@ -26,7 +26,7 @@ export default function App() {
             <Hero windowWidth={windowWidth} windowHeight={windowHeight} />
             <Skills />
             <Works />
-            <Contact />
+            <Contact windowWidth={windowWidth} />
         </>
     );
 }

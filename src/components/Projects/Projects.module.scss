@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100dvh;
     width: 100%;
     background: linear-gradient(#0f0d16 0%, #0a080c 90%, #130d1e 100%);
     padding: 128px 0 48px 0;
@@ -30,7 +29,6 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 36px;
-        height: 100%;
         padding: 0 36px 0px 36px;
     }
 
@@ -110,6 +108,115 @@
         & img {
             height: 18px;
             transition: scale 0.2s ease-out;
+        }
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .projectsContainer {
+        & a {
+            padding: 18px 28px;
+            gap: 16px;
+
+            & h4 {
+                font-size: 24px;
+            }
+
+            & img {
+                height: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .projectsContainer {
+        & a {
+            gap: 12px;
+
+            & h4 {
+                font-size: 18px;
+            }
+
+            & img {
+                height: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .projectsContainer {
+        & .projectsList {
+            grid-template-columns: repeat(1, 1fr);
+            padding: 0 24px 0px 24px;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .projectsContainer {
+        & a {
+            padding: 14px 22px;
+            gap: 8px;
+
+            & h4 {
+                font-size: 18px;
+            }
+
+            & img {
+                height: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .projectsContainer {
+        & h2 {
+            font-size: 36px;
+            & img {
+                max-width: 110vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .projectsContainer {
+
+        & h2 {
+            font-size: 32px;
+        }
+
+        & a {
+            padding: 13px 21px;
+            gap: 12px;
+
+            & h4 {
+                font-size: 17px;
+            }
+
+            & img {
+                height: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .projectsContainer {
+        & a {
+            padding: 12px 20px;
+            gap: 8px;
+
+            & h4 {
+                font-size: 16px;
+            }
+
+            & img {
+                height: 14px;
+            }
         }
     }
 }

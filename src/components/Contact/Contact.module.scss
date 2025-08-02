@@ -3,7 +3,7 @@
     min-height: 100dvh;
     background: radial-gradient(circle at left, #49a9e538, #00000000),
         linear-gradient(#fff, #ffe2ff);
-    padding: 110px 64px 64px 64px;
+    padding: 110px 64px 32px 64px;
     position: relative;
 
     & .shape {
@@ -17,7 +17,7 @@
     & > div {
         display: flex;
         width: 100%;
-        padding: 128px 64px 64px 64px;
+        padding: 96px 48px 48px 48px;
         background: #ffffff3e;
         border: 2px solid #ffffff5e;
         backdrop-filter: blur(6px);
@@ -66,6 +66,123 @@
                     font-size: 18px;
                     font-weight: 400;
                     color: var(--on-light-2);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .contactContainer {
+        & > div {
+            padding: 128px 48px 48px 48px;
+            gap: 48px;
+
+            & .contactHeader {
+                max-width: 470px;
+                & h2 {
+                    font-size: 32px;
+                }
+            }
+
+            & .contactContent {
+                & > div {
+                    gap: 16px;
+                    & h4 {
+                        font-size: 20px;
+                    }
+
+                    & p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .contactContainer {
+        padding: 110px 24px 24px 24px;
+
+        & .shape {
+            left: 32%;
+            top: 55%;
+            transform: translate(-68%, -45%);
+            width: 33vw;
+        }
+
+        & > div {
+            padding: 128px 48px 48px 48px;
+            border-radius: 36px;
+            gap: 48px;
+
+            & .contactHeader {
+                & h2 {
+                    font-size: 28px;
+                }
+            }
+
+            & .contactContent {
+                & > div {
+                    gap: 12px;
+                    & h4 {
+                        font-size: 18px;
+                    }
+
+                    & p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .contactContainer {
+        padding: 110px 24px 24px 24px;
+
+        & .shape {
+            left: 50%;
+            top: auto;
+            bottom: 0;
+            transform: translate(-50%, 0%);
+            max-width: 80vw;
+            max-height: 33vh;
+            width: auto;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        & > div {
+            flex-direction: column;
+            padding: 64px 36px 36px 36px;
+            gap: 36px;
+
+            & .contactHeader {
+                height: fit-content;
+                width: auto;
+                max-width: none;
+                & h2 {
+                    font-size: 28px;
+                }
+
+                & > div {
+                    display: none;
+                }
+            }
+
+            & .contactContent {
+                & > div {
+                    gap: 20px;
+                    & h4 {
+                        font-size: 20px;
+                    }
+
+                    & p {
+                        font-size: 15px;
+                    }
                 }
             }
         }

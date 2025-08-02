@@ -2,7 +2,7 @@ import styles from "./Projects.module.scss";
 
 import { useMemo } from "react";
 
-import Project from "../Project/Project";
+import Project from "./Project/Project";
 import { getProjects } from "../../api/projects";
 
 import arrow_down from "../../assets/img/arrow_down.svg";

@@ -1,16 +1,11 @@
 import styles from "./Skills.module.scss";
 import skills_shape from "../../assets/img/skills_shape.png";
-import FloatingSkill from "../FloatingSkill/FloatingSkill";
+import FloatingSkill from "./FloatingSkill/FloatingSkill";
 import { MontageIcon, DevIcon, DesignIcon, BrandingIcon } from "../Icons";
 
 export default function Skills() {
     return (
         <section className={styles.skillsContainer}>
-            <img
-                className={styles.skillsShape}
-                src={skills_shape}
-                alt="Skills Shape"
-            />
             <div className={styles.skillsContent}>
                 <h2>
                     Rien n'est Laissé au Hasard,
@@ -23,6 +18,14 @@ export default function Skills() {
                     solutions sur mesure, efficaces et créatives.
                 </p>
             </div>
+            <div className={styles.skillsShapeWrapper}>
+                <img
+                    className={styles.skillsShape}
+                    src={skills_shape}
+                    alt="Skills Shape"
+                />
+            </div>
+
             <FloatingSkill top={40} left={65} Image={BrandingIcon}>
                 Identité Visuelle
             </FloatingSkill>
