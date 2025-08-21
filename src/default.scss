@@ -1,0 +1,33 @@
+@use "./assets/styles/fonts.scss";
+@use "./assets/styles/variables.scss";
+
+:root {
+    font-family: "Manrope", sans-serif;
+    color: var(--on-surface-0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    font-weight: 500;
+    color: var(--primary);
+    text-decoration: inherit;
+}
+
+h1, h2, h4, h5 {
+    background: var(--primary-linear);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    width: fit-content;
+    line-height: 1;
+}
+
+p {
+    color: var(--on-surface-1);
+}

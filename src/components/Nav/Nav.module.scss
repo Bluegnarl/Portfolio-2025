@@ -1,0 +1,20 @@
+.navContainer {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    & .nav {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1440px;
+        padding: 24px 48px;
+
+        & .navGroup {
+            display: flex;
+            gap: 12px;
+        }
+    }
+}
