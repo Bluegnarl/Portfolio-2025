@@ -132,6 +132,12 @@
     }
 }
 
+@media screen and (max-width: 550px) {
+    .heroContainer {
+        gap: 28px;
+    }
+}
+
 @media screen and (max-width: 350px) {
     .heroContainer {
         & p {

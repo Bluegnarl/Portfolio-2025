@@ -75,6 +75,12 @@
     }
 }
 
+@media screen and (max-width: 450px) {
+    .titleContainer {
+        gap: 16px;
+    }
+}
+
 @media screen and (max-width: 350px) {
     .titleContainer {
 
