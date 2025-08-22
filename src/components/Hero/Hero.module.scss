@@ -1,7 +1,7 @@
 .heroContainer {
     display: flex;
     width: 100%;
-    min-height: 100vh;
+    min-height: 100dvh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -109,7 +109,7 @@
     .heroContainer {
         & .flashlight {
             background-image: conic-gradient(
-                from 0deg at 50% -5%,
+                from 0deg at 50% -25%,
                 transparent 45%,
                 rgba(124, 145, 182, 0.4) 49%,
                 rgba(124, 145, 182, 0.5) 50%,
