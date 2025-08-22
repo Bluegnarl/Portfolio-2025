@@ -4,6 +4,8 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    opacity: 0;
+    transform: translateY(-20%);
 
     & .nav {
         display: flex;
@@ -16,6 +18,19 @@
             display: flex;
             gap: 12px;
         }
+    }
+
+    animation: navAnimation 2s 2s forwards;
+}
+
+@keyframes navAnimation {
+    0% {
+        transform: translateY(-20%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 

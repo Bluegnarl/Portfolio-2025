@@ -11,7 +11,7 @@
     background: radial-gradient(
             ellipse 40% 100% at center bottom,
             rgba(21, 61, 204, 0.15) 0%,
-            rgba(21, 61, 204, 0) 100%
+            rgba(21, 61, 204, 0.01) 100%
         ),
         radial-gradient(
             circle,
@@ -25,6 +25,9 @@
         font-weight: 400;
         text-align: justify;
         text-align-last: justify;
+        transform: translateY(20%);
+        opacity: 0;
+        animation: heroParagrapheAnimation 1.5s 1s forwards;
     }
 
     & .flashlight {
@@ -96,6 +99,17 @@
     }
 }
 
+@keyframes heroParagrapheAnimation {
+    0% {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 @media screen and (max-width: 1400px) {
     .heroContainer {
         gap: 32px;
@@ -151,6 +165,7 @@
 
 @media screen and (max-width: 350px) {
     .heroContainer {
+        gap: 24px;
         & p {
             font-size: calc((100vw) / 30);
         }
