@@ -40,16 +40,16 @@
         pointer-events: none;
 
         background-image: conic-gradient(
-            from 0deg at 50% -25%,
+            from 0deg at 50% -45%,
             transparent 45%,
             rgba(124, 145, 182, 0.3) 49%,
-            rgba(124, 145, 182, 0.35) 50%,
+            rgba(124, 145, 182, 0.3) 50%,
             rgba(124, 145, 182, 0.3) 51%,
             transparent 55%
         );
 
         opacity: 0.5;
-        filter: blur(16px);
+        filter: blur(32px);
         transform-origin: 50% 0;
 
         animation: flashlight-opacity 3s 3s linear infinite alternate,
@@ -141,6 +141,7 @@
                 rgba(124, 145, 182, 0.3) 51%,
                 transparent 55%
             );
+            filter: blur(16px);
 
             animation: flashlight-opacity 3s 3s linear infinite alternate,
                 flashlight-active 3s linear;
