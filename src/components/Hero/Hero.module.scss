@@ -7,7 +7,7 @@
     flex-direction: column;
     overflow: hidden;
     gap: 40px;
-    padding-bottom: 128px;
+    padding: 0 24px 10vh 24px;
     background: radial-gradient(
             circle,
             rgba(21, 61, 204, 0.08) 10%,
@@ -20,11 +20,6 @@
             rgba(152, 192, 239, 0) 100%
         );
 
-    & h2 {
-        font-size: 100px;
-        font-weight: 500;
-    }
-
     & p {
         font-size: 20px;
         font-weight: 400;
@@ -35,14 +30,14 @@
     & .flashlight {
         position: absolute;
         left: 50%;
-        width: 1200px;
-        max-width: 100vw;
+        width: 100vw;
         height: 100%;
+        top: 0;
         transform: translateX(-50%);
         pointer-events: none;
 
         background-image: conic-gradient(
-            from 0deg at 50% 5%,
+            from 0deg at 50% -25%,
             transparent 45%,
             rgba(124, 145, 182, 0.4) 49%,
             rgba(124, 145, 182, 0.5) 50%,
@@ -51,30 +46,96 @@
         );
 
         opacity: 0.5;
-        border-radius: 9999px;
-        filter: blur(32px);
+        filter: blur(16px);
         transform-origin: 50% 0;
 
-        animation: flashlight-opacity 6s linear infinite alternate,
-            flashlight-scale 6s ease-in-out infinite;
-    }
+        animation: flashlight-opacity 3s 3s linear infinite alternate,
+            flashlight-scale 6s 3s ease-in-out infinite,
+            flashlight-active 3s linear;
 
-    @keyframes flashlight-opacity {
-        0% {
-            opacity: 0.4;
-        }
-        100% {
-            opacity: 0.8;
+        mask-image: radial-gradient(
+            circle at 50% -25%,
+            rgba(0, 0, 0, 0.15) 0%,
+            black 50%
+        );
+        mask-composite: intersect;
+        -webkit-mask-image: radial-gradient(
+            circle at 50% -25%,
+            rgba(0, 0, 0, 0.15) 0%,
+            black 50%
+        );
+        -webkit-mask-composite: destination-in;
+    }
+}
+
+@keyframes flashlight-active {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes flashlight-opacity {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes flashlight-scale {
+    0%,
+    100% {
+        transform: translateX(-50%) scaleX(1);
+    }
+    50% {
+        transform: translateX(-50%) scaleX(0.8);
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .heroContainer {
+        gap: 32px;
+        & p {
+            font-size: 16px;
         }
     }
+}
 
-    @keyframes flashlight-scale {
-        0%,
-        100% {
-            transform: translateX(-50%) scale(0.95);
+@media screen and (max-width: 750px) {
+    .heroContainer {
+        & .flashlight {
+            background-image: conic-gradient(
+                from 0deg at 50% -5%,
+                transparent 45%,
+                rgba(124, 145, 182, 0.4) 49%,
+                rgba(124, 145, 182, 0.5) 50%,
+                rgba(124, 145, 182, 0.4) 51%,
+                transparent 55%
+            );
+
+            animation: flashlight-opacity 3s 3s linear infinite alternate,
+                flashlight-active 3s linear;
         }
-        50% {
-            transform: translateX(-50%) scale(1);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .heroContainer {
+        gap: 32px;
+        & p {
+            font-size: calc((100vw - 24px) / 30);
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .heroContainer {
+        & p {
+            font-size: calc((100vw) / 30);
         }
     }
 }

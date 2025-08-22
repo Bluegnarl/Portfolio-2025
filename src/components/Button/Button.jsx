@@ -1,6 +1,6 @@
 import styles from "./Button.module.scss";
 
-export default function Button({ children, side, href }) {
+export default function Button({ children, side, href, isHero }) {
     return (
         <>
             {side != "center" ? (
@@ -14,12 +14,15 @@ export default function Button({ children, side, href }) {
                         ? styles.buttonLeft
                         : ""
                 }  
+                ${isHero && styles.buttonHero}  
             `}
                 >
                     {children}
                 </button>
             ) : (
-                <a target="_blank" href={href} className={styles.button}>{children}</a>
+                <a target="_blank" href={href} className={styles.button}>
+                    {children}
+                </a>
             )}
         </>
     );

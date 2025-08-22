@@ -9,12 +9,25 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
-        max-width: 1440px;
+        max-width: 1200px;
         padding: 24px 48px;
 
         & .navGroup {
             display: flex;
             gap: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .navContainer {
+        & .nav {
+            padding: 24px 24px;
+
+            & .navGroup {
+                display: flex;
+                gap: 8px;
+            }
         }
     }
 }

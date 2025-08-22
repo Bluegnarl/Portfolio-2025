@@ -1,9 +1,14 @@
 .titleContainer {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 28px;
     align-items: center;
     justify-content: center;
+
+    & h2 {
+        font-size: 100px;
+        font-weight: 500;
+    }
 
     & .tagline {
         display: flex;
@@ -26,6 +31,55 @@
             font-family: "Inter", sans-serif;
             font-size: 16px;
             font-weight: 400;
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .titleContainer {
+        gap: 24px;
+
+        & h2 {
+            font-size: 80px;
+        }
+
+        & .tagline {
+            gap: 20px;
+
+            & h5 {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .titleContainer {
+        gap: 20px;
+
+        & h2 {
+            font-size: calc((100vw - 24px) / 6);
+        }
+
+        & .tagline {
+            gap: 16px;
+
+            & .line {
+                height: 1px;
+            }
+
+            & h5 {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .titleContainer {
+
+        & h2 {
+            font-size: calc((100vw) / 6.2);
         }
     }
 }
