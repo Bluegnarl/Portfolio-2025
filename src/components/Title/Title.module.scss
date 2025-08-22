@@ -8,7 +8,7 @@
     & h2 {
         font-size: 100px;
         font-weight: 500;
-        animation: titleAnimation 1.5s forwards;
+        animation: titleAnimation 1.5s 0.5s forwards;
     }
 
     & .tagline {
