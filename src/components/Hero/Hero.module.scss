@@ -27,7 +27,7 @@
         text-align-last: justify;
         transform: translateY(20%);
         opacity: 0;
-        animation: heroParagrapheAnimation 1.5s 1.5s forwards;
+        animation: heroParagrapheAnimation 1s 1.5s ease-in-out forwards;
     }
 
     & .flashlight {
