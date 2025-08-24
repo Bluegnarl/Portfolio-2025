@@ -24,7 +24,7 @@
             width: 0%;
             height: 2px;
             opacity: 0.5;
-            animation: lineAnimation 4s 0.7s forwards;
+            animation: lineAnimation 4s 1s forwards;
             &:first-child {
                 background: linear-gradient(90deg, #b8d7fe00, #b8d7fe63);
             }
@@ -39,7 +39,7 @@
             font-weight: 400;
             opacity: 0;
             transform: translateY(-50%);
-            animation: taglineTextAnimation 1s 0s forwards;
+            animation: taglineTextAnimation 1s 0.5s forwards;
         }
     }
 }
