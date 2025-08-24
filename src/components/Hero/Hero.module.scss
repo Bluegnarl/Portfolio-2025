@@ -27,7 +27,7 @@
         text-align-last: justify;
         transform: translateY(20%);
         opacity: 0;
-        animation: heroParagrapheAnimation 1.5s 1s forwards;
+        animation: heroParagrapheAnimation 1.5s 1.5s forwards;
     }
 
     & .flashlight {
@@ -40,7 +40,7 @@
         pointer-events: none;
 
         background-image: conic-gradient(
-            from 0deg at 50% -45%,
+            from 0deg at 50% -55%,
             transparent 45%,
             rgba(124, 145, 182, 0.3) 49%,
             rgba(124, 145, 182, 0.3) 50%,
@@ -101,7 +101,7 @@
 
 @keyframes heroParagrapheAnimation {
     0% {
-        transform: translateY(20%);
+        transform: translateY(15%);
         opacity: 0;
     }
     100% {
